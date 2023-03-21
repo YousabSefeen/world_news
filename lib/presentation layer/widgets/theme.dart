@@ -56,7 +56,7 @@ class Themes {
         fontWeight: FontWeight.w700,
       ),
       titleSmall: TextStyle(
-        fontSize: 22.sp,
+        fontSize: 20.sp,
         color: Colors.blue,
         fontWeight: FontWeight.w900,
       ),
@@ -129,7 +129,7 @@ class Themes {
         overflow: TextOverflow.ellipsis,
       ),
       titleSmall: TextStyle(
-        fontSize: 22.sp,
+        fontSize: 20.sp,
         color: Colors.blue,
         fontWeight: FontWeight.w900,
       ),

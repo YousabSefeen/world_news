@@ -39,10 +39,10 @@ class NewsItem extends StatelessWidget {
               child: SizedBox(
                 height: 300.h,
                 width: double.infinity,
-                child: LayoutBuilder(
-                  builder: (context, constraints) => Padding(
-                    padding: EdgeInsets.only(top: 14.h),
-                    child: Column(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 14.h),
+                  child: LayoutBuilder(
+                    builder: (context, constraints) => Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -109,6 +109,9 @@ class NewsItem extends StatelessWidget {
                               /// Handling images when be error coming from Api
                               : CachedNetworkImage(
                                   imageUrl: newsDetails['urlToImage'],
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                  height: constraints.maxHeight * 0.55,
                                   placeholder: (ctx, s) => Image.asset(
                                     'assets/images/loading.gif',
                                     fit: BoxFit.cover,
@@ -121,9 +124,6 @@ class NewsItem extends StatelessWidget {
                                     width: double.infinity,
                                     height: constraints.maxHeight * 0.5,
                                   ),
-                                  fit: BoxFit.cover,
-                                  width: double.infinity,
-                                  height: constraints.maxHeight * 0.5,
                                 ),
                         ),
                       ],

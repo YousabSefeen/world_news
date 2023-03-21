@@ -21,9 +21,9 @@ class CustomGridView extends StatelessWidget {
         /// It is very important that someone else can get me an error
         physics: const NeverScrollableScrollPhysics(),
         padding: EdgeInsets.only(bottom: 20.h),
-        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 360,
-          childAspectRatio: 3 / 6,
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200.w,
+          childAspectRatio: 3.w / 6.h,
         ),
 
         itemCount: itemCount,
